@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>Neon Particle Heart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Poppins:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Asosiy sahna: yulduzlar, kometalar, zarrachali yurak -->
+  <canvas id="scene" aria-hidden="true"></canvas>
+
+  <header class="top">
+    <h1 class="title">Neon Particle Heart</h1>
+  </header>
+
+  <!-- Yurak markazidagi ism: rangi o'zgarmaydi -->
+  <div id="name" class="name">Shalola</div>
+
+  <button id="giftBtn" class="gift-btn" type="button" aria-haspopup="dialog">
+    <svg class="gift-ico" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+      <path d="M12 8v13"></path>
+      <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path>
+      <path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8"></path>
+      <path d="M16.5 8a2.5 2.5 0 0 0 0-5C13 3 12 8 12 8"></path>
+    </svg>
+    <span>special gift for only Shalola</span>
+  </button>
+
+  <!-- Sovg'a oynasi -->
+  <div id="gift" class="gift" role="dialog" aria-modal="true" aria-labelledby="giftTitle" aria-hidden="true">
+    <div id="loveLayer" class="love-layer" aria-hidden="true"></div>
+
+    <button id="giftClose" class="x" type="button" aria-label="Yopish">&times;</button>
+
+    <div class="card">
+      <h2 id="giftTitle" class="gift-title">Shalola, bu faqat senga</h2>
+      <div id="poem" class="poem" aria-live="polite"></div>
+      <button id="giftNext" class="next" type="button">Yana bitta</button>
+    </div>
+  </div>
+
+  <!-- Teginganda chiqadigan qirmizi yurakchalar (hamma narsaning ustida) -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <noscript>
+    <p class="noscript">Bu sahifa ishlashi uchun JavaScript yoqilgan bo'lishi kerak.</p>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
